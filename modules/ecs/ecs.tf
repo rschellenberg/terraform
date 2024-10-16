@@ -103,7 +103,7 @@ resource "aws_ecs_service" "demo_app_service" {
   cluster         = aws_ecs_cluster.demo_app_cluster.id
   task_definition = aws_ecs_task_definition.demo_app_task.arn
   launch_type     = "FARGATE"
-  desired_count   = 1
+  desired_count   = 2
 
   load_balancer {
     target_group_arn = aws_lb_target_group.target_group.arn
